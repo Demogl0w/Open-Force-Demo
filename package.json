@@ -1,5 +1,5 @@
 {
-  "name": "reactexpress",
+  "name": "ronswansonwquotes",
   "version": "1.0.0",
   "description": "Starter kit for creating React/Redux and Express apps",
   "main": "server.js",
@@ -17,5 +17,13 @@
     "concurrently": "^3.5.1",
     "express": "^4.16.2",
     "nodemon": "^1.14.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Demogl0w/Open-Force-Demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Demogl0w/Open-Force-Demo/issues"
+  },
+  "homepage": "https://github.com/Demogl0w/Open-Force-Demo#readme"
 }
