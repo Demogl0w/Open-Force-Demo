@@ -2,7 +2,7 @@ const express = require("express");
 const https = require("https");
 const app = express();
 const cors = require("cors");
-const port = 5000;
+const port = process.env.PORT || 5000;
 var bodyParser = require("body-parser");
 let database = []; // in place of a database
 
