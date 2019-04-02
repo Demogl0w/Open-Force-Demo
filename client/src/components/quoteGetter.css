@@ -8,19 +8,15 @@ select {
   appearance: none;
   background-image: linear-gradient(136deg, #95b49a, burlywood, #ffffff);
   border-radius: 3px;
-  width: 70px;
+  width: 90px;
   box-shadow: 15px 11px 23px 0px rgba(0, 0, 0, 0.75);
-  color: white;
-  padding-left: 15px;
+  color: #774a4a;
+  font-family: Impact;
+  padding-left: 5px;
   height: 25px;
 }
-/* img {
-  width: 30px;
-  height: 30px;
-} */
 
 .quote-getter {
-  /* background-size: cover; */
   border-bottom: 1px solid
     linear-gradient(136deg, #f3f3f3, rgb(255, 255, 255), #ffffff);
 
@@ -28,7 +24,6 @@ select {
   border-radius: 5px;
   box-shadow: 0 2px 4px #000;
 
-  /* transform: scale(0.9); */
   transition: 0.1s;
 }
 .ronsWords {
@@ -62,15 +57,12 @@ li {
   color: white;
 }
 
-.qgTitle {
-  color: white;
-}
-
 .quoteButton {
   width: 70px;
-  color: white;
+  color: #774a4a;
   box-shadow: 15px 11px 23px 0px rgba(0, 0, 0, 0.75);
   height: 25px;
+  font-family: Impact;
   border-radius: 5px;
   background: linear-gradient(136deg, #95b49a, burlywood, #ffffff);
 }
@@ -86,15 +78,3 @@ li {
     background-position: Left 500px top 10px;
   }
 }
-/* @keyframes AnimationName {
-    0% {
-      background-position: Left -500px top 10px;
-      transform: translate(0px, -200px);
-    }
-    20% {
-      transform: translate(-100px, 0px);
-    }
-    100% {
-      background-position: Left 500px top 10px;
-    }
-  } */

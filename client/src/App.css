@@ -16,11 +16,9 @@
     #774949
   );
   height: 100vh;
-  /* animation: App-logo-spin infinite 20s linear; */
 }
 
 .App-logo {
-  /* animation: App-logo-spin infinite 20s linear; */
   height: 100px;
   box-shadow: 15px 11px 23px 0px rgba(0, 0, 0, 0.75);
 
@@ -43,7 +41,9 @@
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 2em;
+  color: #d6be93;
+  font-family: Impact;
 }
 
 .App-intro {

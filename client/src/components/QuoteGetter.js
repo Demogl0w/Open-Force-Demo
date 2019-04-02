@@ -5,13 +5,14 @@ import { GET_NEW_QUOTE, SET_SIZE } from "../store/actions/constants";
 import "./quoteGetter.css";
 import "./ratings.css";
 
-// import store from "../store";
-
 const mapStateToProps = state => ({
-  ...state.customers
+  ...state.quote
 });
 const mapDispatchToProps = dispatch => ({
+  //Sets requested size of a quote
   setSize: quoteSize => dispatch({ type: SET_SIZE, payload: quoteSize }),
+
+  //Dispatch that hits our server quote and quote info
   getQuote: size => {
     fetch(`http://localhost:5000/Quote/${size}`)
       .then(res => res.json())
@@ -25,11 +26,13 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
+//Pull in an initial quote just for fun
 class Quoter extends Component {
   componentWillMount() {
     this.props.getQuote();
   }
 
+  //Displaying the quotes
   newQuoteView() {
     if (this.props.tempQuote) {
       return (
@@ -53,6 +56,7 @@ class Quoter extends Component {
             Wisdom
           </button>{" "}
           <select onChange={e => this.props.setSize(e.target.value)}>
+            <option defaultValue>How Much Ron</option>
             <option value="Large">Large</option>
             <option value="Medium">Medium</option>
             <option value="Small">Small</option>
@@ -67,7 +71,6 @@ class Quoter extends Component {
             />
           )}
         </div>
-        <span className="guideline" />
       </div>
     );
   }

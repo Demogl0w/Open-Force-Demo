@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import customerReducer from "./customer";
+import quoteReducer from "./quote";
 
 export default combineReducers({
-  customers: customerReducer
+  quote: quoteReducer
 });

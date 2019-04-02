@@ -2,6 +2,7 @@ const express = require("express");
 const https = require("https");
 const app = express();
 const cors = require("cors");
+const port = 5000;
 var bodyParser = require("body-parser");
 let database = []; // in place of a database
 
@@ -9,6 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
+//Pulling in quotes from Ron Swanson API
 const getQoutes = () => {
   https
     .get("https://ron-swanson-quotes.herokuapp.com/v2/quotes/58", resp => {
@@ -38,6 +40,7 @@ const getQoutes = () => {
     });
 };
 
+// Rating Quotes and Checking IP Adress for duplicate rating
 app.post("/RateQuote", (req, res) => {
   let entry =
     database[
@@ -64,6 +67,7 @@ app.post("/RateQuote", (req, res) => {
 
 getQoutes();
 
+// Case Handler for Quote size sorting. Small ,Medium, Large
 function quoteSizer(size, numOfWords) {
   switch (size) {
     case "Large":
@@ -93,6 +97,7 @@ function quoteSizer(size, numOfWords) {
   }
 }
 
+//Finding number of words sentence
 app.get("/Quote/:size", (req, res) => {
   let Quotes = database.filter(entry => {
     let numOfWords = entry.quote.split(" ").length;
@@ -106,11 +111,10 @@ app.get("/Quote/:size", (req, res) => {
   res.send(Quotes[randomNumber]);
 });
 
+//Randomizing
 app.get("/Quote", (req, res) => {
   let randomNumber = Math.floor(Math.random() * (database.length - 1));
   res.send(database[randomNumber]);
 });
-
-const port = 5000;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));

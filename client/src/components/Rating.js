@@ -3,8 +3,8 @@ import BlackStar from "../images/BlackStar.png";
 import HalfStar from "../images/HalfStar.png";
 import NoStar from "../images/NoStar.png";
 import "./quoteGetter.css";
-// import "./ratings.css";
 
+//Forming a post request for rating storage
 const poster = (rating, quote) => {
   fetch("http://localhost:5000/RateQuote", {
     method: "POST",
@@ -22,6 +22,7 @@ const Rating = props => {
   let stars = [];
   let halfie = true;
   for (let index = 1; index < 6; index++) {
+    //Finding Range for quotes and pusing visual feedback
     if (props.rating >= index) {
       stars.push(
         <img
@@ -32,6 +33,7 @@ const Rating = props => {
           src={BlackStar}
         />
       );
+      //Finding Average for quotes and pusing visual feedback
     } else if (props.rating % 1 !== 0 && halfie) {
       halfie = false;
       stars.push(
@@ -43,6 +45,7 @@ const Rating = props => {
           onClick={() => poster(index, props.quote)}
         />
       );
+      //Finding Range for quotes and pusing visual feedback
     } else {
       stars.push(
         <img
