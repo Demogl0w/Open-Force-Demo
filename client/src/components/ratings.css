@@ -1,0 +1,26 @@
+.stars:hover {
+  transform: scale(1.5);
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  border-radius: 100%;
+  background: #774a4a;
+  box-shadow: 15px 11px 23px 0px rgba(0, 0, 0, 0.75);
+}
+.stars {
+  width: 30px;
+  padding-left: 1px;
+  padding-top: 1px;
+  height: 30px;
+}
+#ratinghousing {
+  margin-left: 44%;
+  padding: 0px;
+  height: 34px;
+  border-radius: 20px;
+  width: 157px;
+  display: flex;
+  flex: 1;
+  background: linear-gradient(270deg, #774a4a, #d6bf93, #774a4a);
+  flex-direction: row;
+  box-shadow: 15px 11px 23px 0px rgba(0, 0, 0, 0.75);
+}
