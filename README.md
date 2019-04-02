@@ -1,12 +1,7 @@
-# React/Redux Express Starter Pack
+# Ron Swanson Quote Fetcher 
 
-> Create full stack apps with React/Redux and Express. Run your client and server with a single command
+Clone or download this repository 
 
-### Version Without Redux
-This version includes Redux
-[Click Here For the Version WITHOUT Redux](https://github.com/bradtraversy/react_express_starter) 
-
-## Quick Start
 
 ``` bash
 # Install dependencies for server
@@ -28,10 +23,11 @@ npm run client
 ```
 
 ## App Info
+Demo App for Open Force Job Interview. 
 
 ### Authors
 
-Brad Traversy & Gregory Assasie
+Demorio Fluker
 
 ### Version
 
